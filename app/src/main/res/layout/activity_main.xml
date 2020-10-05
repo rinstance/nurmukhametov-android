@@ -6,13 +6,213 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="	#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="rinatvk"
+        android:textStyle="bold"
+        android:textColor="	#000000"
+        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ava" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Нурмухаметов Ринат"
+                android:textColor="	#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Online"
+                android:textColor="#A9A9A9"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:text="Редактировать"
+        android:textColor="#1a71db"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linear_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:drawableTop="@drawable/ic_camera_alt_black_24dp"
+            android:layout_height="match_parent"
+            android:text="История"
+            android:textSize="18dp"
+            android:textColor="#1a71db"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:drawableTop="@drawable/ic_edit_black_24dp"
+            android:layout_height="match_parent"
+            android:text="Запись"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            android:textColor="#1a71db"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:drawableTop="@drawable/ic_photo_black_24dp"
+            android:layout_height="match_parent"
+            android:text="Фото"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            android:textColor="#1a71db"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:drawableTop="@drawable/ic_slow_motion_video_black_24dp"
+            android:layout_height="match_parent"
+            android:text="Клип"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            android:textColor="#1a71db"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/linear_four">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="94 друга"
+            android:drawableStart="@drawable/ic_accessibility_black_24dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:text="Место работы: МакДональдз"
+            android:drawableStart="@drawable/ic_work_black_24dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:text="339 подписчиков"
+            android:drawableStart="@drawable/ic_wifi_black_24dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:text="Указать место учёбы"
+            android:drawableStart="@drawable/ic_school_black_24dp"
+            android:textSize="20sp"
+            android:textColor="#1a71db"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:text="Подробная информация"
+            android:drawableStart="@drawable/ic_info_black_24dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1a71db"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="ФОТОГРАФИИ"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearInfo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="6"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/linearInfo" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
