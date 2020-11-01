@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/page_init"
+        android:enabled="true"
+        android:title="@string/init" />
+
+    <item
+        android:id="@+id/page_list"
+        android:enabled="true"
+        android:title="@string/list" />
+
+    <item
+        android:id="@+id/page_images"
+        android:enabled="true"
+        android:title="@string/images" />
+</menu>
