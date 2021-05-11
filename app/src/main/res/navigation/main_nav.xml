@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplication.main.fragmnets.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_firstNested"
+            app:destination="@id/firstNestedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.example.myapplication.main.fragmnets.CatalogFragment"
+        android:label="fragment_catalog"
+        tools:layout="@layout/fragment_catalog" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.myapplication.main.fragmnets.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/firstNestedFragment"
+        android:name="com.example.myapplication.main.fragmnets.profile.FirstNestedFragment"
+        android:label="fragment_first_nested"
+        tools:layout="@layout/fragment_first_nested" >
+        <action
+            android:id="@+id/action_firstNested_to_secondNested"
+            app:destination="@id/secondNestedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondNestedFragment"
+        android:name="com.example.myapplication.main.fragmnets.profile.SecondNestedFragment"
+        android:label="fragment_second_nested"
+        tools:layout="@layout/fragment_second_nested" >
+        <action
+            android:id="@+id/action_secondNested_to_thirdNested"
+            app:destination="@id/thirdNestedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdNestedFragment"
+        android:name="com.example.myapplication.main.fragmnets.profile.ThirdNestedFragment"
+        android:label="fragment_third_nested"
+        tools:layout="@layout/fragment_third_nested" />
+</navigation>
